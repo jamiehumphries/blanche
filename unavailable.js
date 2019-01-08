@@ -1,7 +1,10 @@
 module.exports = new Set([
+  // KANTO
+  132, // Ditto
   // JOHTO
   235, // Smeargle
   // HOENN
+  292, // Shedinja
   352, // Kecleon
   366, // Clamperl
   367, // Huntail
