@@ -1,0 +1,11 @@
+{
+  "name": "blanche",
+  "version": "1.0.0",
+  "description": "Discord bot for random Pokémon GO battles.",
+  "main": "bot.js",
+  "author": "JTAtomico",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "pokemon": "^1.2.3"
+  }
+}
