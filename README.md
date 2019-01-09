@@ -74,4 +74,4 @@ If you would rather not talk to a bot as if it were a person, then the minimal c
 
 ## Issues
 
-Please raise any bugs or issues on Github: https://github.com/jamiehumphries/blanche/issues
+Please raise any bugs or issues on GitHub: https://github.com/jamiehumphries/blanche/issues
