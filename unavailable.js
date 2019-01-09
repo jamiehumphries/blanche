@@ -56,5 +56,5 @@ module.exports = new Set([
   490, // Manaphy
   491, // Darkrai
   492, // Shaymin
-  493, // Arceus
-]);
+  493 // Arceus
+])
