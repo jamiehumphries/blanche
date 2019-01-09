@@ -30,7 +30,7 @@ For example:
 >
 > This is a B-Tier battle which should be fought in the **Ultra League**.<br/>
 
-Pokémon are split into tiers based on their maximum CP, to help balance the match-ups.
+To help balance the match-ups, Pokémon are split into tiers based on their maximum CP:
 
 * **S-Tier** CP 3001 or higher
 * **A-Tier** CP 2501 - CP 3000
