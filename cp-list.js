@@ -1,3 +1,5 @@
+// Source: Pokemon GO CP Dex
+// https://docs.google.com/spreadsheets/d/1l8fa_BAkpzm1ZTOwvV3vjgaMlAGOKO0AkRwJP-u18n4/edit#gid=1791446813
 module.exports = Object.freeze({
   // KANTO
   'Bulbasaur': 1115,
