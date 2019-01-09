@@ -16,6 +16,8 @@ const tiers = {
   F: { article: 'an', league: 'Great', pokemon: [] }
 }
 
+const leagueTiers = _.groupBy(Object.keys(tiers), t => tiers[t].league.toLowerCase())
+
 function getGrade (cp) {
   if (cp > 3000) {
     return 'S'
@@ -48,9 +50,8 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-  if (msg.mentions.users.has(client.user.id)) {
-    // Choose grade randomly, weighted on Pokémon per tier.
-    const grade = getGrade(_.sample(Object.values(cpList)))
+  if (shouldRespond(msg)) {
+    const grade = chooseGrade(msg)
     const tier = tiers[grade]
     const teams = _.sampleSize(tier.pokemon, 12)
     const userTeam = teams.slice(0, 6)
@@ -61,6 +62,26 @@ client.on('message', msg => {
     )
   }
 })
+
+function shouldRespond (msg) {
+  return process.env.ENV === 'production' ? msg.mentions.users.has(client.user.id) : msg.content.startsWith('testblanche')
+}
+
+function chooseGrade (msg) {
+  const tierMatch = msg.content.match(/\b([SABCDEF])[- ]Tier\b/i)
+  if (tierMatch) {
+    // Specified grade.
+    return tierMatch[1].toUpperCase()
+  }
+  const leagueMatch = msg.content.match(/\b(Great|Ultra|Master)\b/i)
+  if (leagueMatch) {
+    // Random grade from specified league.
+    const league = leagueMatch[1].toLowerCase()
+    return _.sample(leagueTiers[league])
+  }
+  // Random grade, weighted on Pokémon per tier.
+  return getGrade(_.sample(Object.values(cpList)))
+}
 
 function format (team) {
   return team.map(id => `◓ ${pad(id)} ${getName(id)}`).join('\n')
