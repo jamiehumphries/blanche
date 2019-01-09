@@ -49,7 +49,8 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.mentions.users.has(client.user.id)) {
-    const grade = _.sample(Object.keys(tiers))
+    // Choose grade randomly, weighted on Pokémon per tier.
+    const grade = getGrade(_.sample(Object.values(cpList)))
     const tier = tiers[grade]
     const teams = _.sampleSize(tier.pokemon, 12)
     const userTeam = teams.slice(0, 6)
