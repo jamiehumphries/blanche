@@ -19,7 +19,7 @@ For example:
 > ◓ 237 Hitmontop<br/>
 > ◓ 326 Grumpig<br/>
 >
-> Your opponent may choose from:<br/>
+> Your opponent may choose from:
 >
 > ◓ 342 Crawdaunt<br/>
 > ◓ 295 Exploud<br/>
@@ -28,7 +28,7 @@ For example:
 > ◓ 026 Raichu<br/>
 > ◓ 335 Zangoose<br/>
 >
-> This is a B-Tier battle which should be fought in the **Ultra League**.<br/>
+> This is a B-Tier battle which should be fought in the **Ultra League**.
 
 To help balance the match-ups, Pokémon are split into tiers based on their maximum CP:
 
