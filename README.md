@@ -70,7 +70,7 @@ If you would rather not talk to a bot as if it were a person, then the minimal c
 
 > @Blanche great
 
-\* _If you specify a Tier and a League, the Tier has priority and inconsistencies between the two are ignored._
+\* _If you specify a Tier and a League, the Tier takes priority and inconsistencies between the two are ignored._
 
 ## Issues
 
