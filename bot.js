@@ -46,7 +46,7 @@ Object.keys(cpList).forEach(pkm => {
 })
 
 client.on('ready', () => {
-  console.log('Ready...')
+  console.log(`Listening on ${client.guilds.array().length} servers...`)
 })
 
 client.on('message', msg => {
