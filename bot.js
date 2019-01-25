@@ -46,7 +46,7 @@ Object.keys(cpList).forEach(pkm => {
 })
 
 client.on('ready', () => {
-  console.log(`Listening on ${client.guilds.array().length} servers...`)
+  console.log(guildReport())
 })
 
 client.on('message', msg => {
@@ -60,8 +60,14 @@ client.on('message', msg => {
       `Your opponent may choose from:\n\n${format(opponentTeam)}\n\n` +
       `This is ${tier.article} ${grade}-Tier battle which should be fought in the **${tier.league} League**.`
     )
+  } else if (msg.author.id === process.env.ME && msg.content === 'blancheguilds') {
+    msg.author.send(guildReport())
   }
 })
+
+function guildReport () {
+  return `Listening on ${client.guilds.array().length} servers.`
+}
 
 function shouldRespond (msg) {
   return process.env.ENV === 'production' ? msg.mentions.users.has(client.user.id) : msg.content.startsWith('testblanche')
