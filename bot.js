@@ -51,25 +51,25 @@ client.on('ready', () => {
   console.log(guildReport())
 })
 
-client.on('message', msg => {
-  if (!shouldListen(msg)) {
+client.on('message', message => {
+  if (!shouldListen(message)) {
     return
   }
-  if (msg.mentions.users.has(client.user.id)) {
-    const grade = chooseGrade(msg)
+  if (message.mentions.users.has(client.user.id)) {
+    const grade = chooseGrade(message)
     const tier = tiers[grade]
     const teams = _.sampleSize(tier.pokemon, 12)
     const userTeam = teams.slice(0, 6)
     const opponentTeam = teams.slice(6)
-    msg.reply(`${isDM(msg) ? 'Y' : 'y'}ou may choose from:\n\n${format(userTeam)}\n\n` +
+    message.reply(`${isDM(message) ? 'Y' : 'y'}ou may choose from:\n\n${format(userTeam)}\n\n` +
       `Your opponent may choose from:\n\n${format(opponentTeam)}\n\n` +
       `This is ${tier.article} ${grade}-Tier battle which should be fought in the **${tier.league} League**.\n\n` +
       `_React with ${SEARCH_EMOJI} to get a search string for your team._`
     ).then(reply => {
       reply.react(SEARCH_EMOJI)
     })
-  } else if (msg.author.id === process.env.ME && msg.content === 'blancheguilds') {
-    msg.author.send(guildReport())
+  } else if (message.author.id === process.env.OWNER && message.content === 'blancheguilds') {
+    message.author.send(guildReport())
   }
 })
 
@@ -96,7 +96,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 function shouldListen (message) {
   const isProduction = this.process.env.ENV === 'production'
   const isTestGuild = message.guild && (message.guild.id === this.process.env.TEST_GUILD)
-  const isOwnerDM = isDM(message) && message.channel.recipient.id === process.env.ME
+  const isOwnerDM = isDM(message) && message.channel.recipient.id === process.env.OWNER
   return (isProduction && !isTestGuild) || (!isProduction && (isTestGuild || isOwnerDM))
 }
 
@@ -108,13 +108,13 @@ function guildReport () {
   return `Listening on ${client.guilds.array().length} servers.`
 }
 
-function chooseGrade (msg) {
-  const tierMatch = msg.content.match(/\b([SABCDEF])[- ]Tier\b/i)
+function chooseGrade (message) {
+  const tierMatch = message.content.match(/\b([SABCDEF])[- ]Tier\b/i)
   if (tierMatch) {
     // Specified grade.
     return tierMatch[1].toUpperCase()
   }
-  const leagueMatch = msg.content.match(/\b(Great|Ultra|Master)\b/i)
+  const leagueMatch = message.content.match(/\b(Great|Ultra|Master)\b/i)
   if (leagueMatch) {
     // Random grade from specified league.
     const league = leagueMatch[1].toLowerCase()
