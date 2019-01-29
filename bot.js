@@ -8,6 +8,10 @@ const unavailable = require('./unavailable')
 
 const SEARCH_EMOJI = '🔍'
 
+let readyTime
+let battlesByGuild = {}
+let searchesByGuild = {}
+
 const tiers = {
   S: { article: 'an', league: 'Master', pokemon: [] },
   A: { article: 'an', league: 'Master', pokemon: [] },
@@ -49,6 +53,7 @@ Object.keys(cpList).forEach(pkm => {
 
 client.on('ready', () => {
   console.log(guildReport())
+  readyTime = new Date()
 })
 
 client.on('message', message => {
@@ -68,8 +73,9 @@ client.on('message', message => {
     ).then(reply => {
       reply.react(SEARCH_EMOJI)
     })
-  } else if (message.author.id === process.env.OWNER && message.content === 'blancheguilds') {
-    message.author.send(guildReport())
+    trackBattle(message.guild)
+  } else if (message.author.id === process.env.OWNER && message.content === 'report') {
+    message.author.send(usageReport())
   }
 })
 
@@ -90,6 +96,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     const isMentionedUser = message.mentions.users.has(user.id)
     const team = isMentionedUser || isDM(message) ? numbers.slice(0, 6) : numbers.slice(6)
     user.send(team.join(','))
+    trackSearch(message.guild)
   }
 })
 
@@ -102,10 +109,6 @@ function shouldListen (message) {
 
 function isDM (message) {
   return message.channel.type === 'dm'
-}
-
-function guildReport () {
-  return `Listening on ${client.guilds.array().length} servers.`
 }
 
 function chooseGrade (message) {
@@ -156,6 +159,40 @@ function getName (id) {
     default:
       return pokemon.getName(id)
   }
+}
+
+function guildReport () {
+  return `Listening on ${client.guilds.array().length} servers.`
+}
+
+function usageReport () {
+  return 'Here is my usage report.\n\n' +
+    `${reportFromStatsMap('battles', battlesByGuild)}\n\n` +
+    `${reportFromStatsMap('searches', searchesByGuild)}\n\n` +
+    `Online since ${readyTime.toUTCString()}.\n` +
+    guildReport()
+}
+
+function reportFromStatsMap (title, statsMap) {
+  const orderedGuilds = Object.keys(statsMap).sort((k1, k2) => statsMap[k2] - statsMap[k1])
+  const lines = orderedGuilds.map(guild => `**${guild}:** ${statsMap[guild]}`).join('\n')
+  return `**${title.toUpperCase()}**\n\n${lines}`
+}
+
+function trackBattle (guild) {
+  track(guild, battlesByGuild)
+}
+
+function trackSearch (guild) {
+  track(guild, searchesByGuild)
+}
+
+function track (guild, statsMap) {
+  const name = guild ? guild.name : '[DM]'
+  if (statsMap[name] === undefined) {
+    statsMap[name] = 0
+  }
+  statsMap[name]++
 }
 
 client.login(process.env.TOKEN)
