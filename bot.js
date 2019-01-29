@@ -64,7 +64,7 @@ client.on('message', message => {
     message.reply(`${isDM(message) ? 'Y' : 'y'}ou may choose from:\n\n${format(userTeam)}\n\n` +
       `Your opponent may choose from:\n\n${format(opponentTeam)}\n\n` +
       `This is ${tier.article} ${grade}-Tier battle which should be fought in the **${tier.league} League**.\n\n` +
-      `_React with ${SEARCH_EMOJI} to get a search string for your team._`
+      `_React with ${SEARCH_EMOJI} to receive a search string for your team._`
     ).then(reply => {
       reply.react(SEARCH_EMOJI)
     })
