@@ -29,6 +29,8 @@ For example:
 > ◓ 335 Zangoose<br/>
 >
 > This is a B-Tier battle which should be fought in the **Ultra League**.
+>
+> _React with 🔍 to receive a search string for your team._
 
 To help balance the match-ups, Pokémon are split into tiers based on their maximum CP:
 
@@ -44,9 +46,9 @@ The idea behind Blanche is to give trainers a reason to use a wider variety of t
 
 ## Installation
 
-To install Blanche on a Discord server that you administer, follow this link: [Install Blanche](https://discordapp.com/oauth2/authorize?client_id=532196601075335168&scope=bot&permissions=2048)
+To install Blanche on a Discord server that you administer, follow this link: [Install Blanche](https://discordapp.com/oauth2/authorize?client_id=532196601075335168&scope=bot&permissions=2112)
 
-Blanche only requires the _Send Messages_ permission.
+Blanche only requires the _Send Messages_ and _Add Reactions_ permissions.
 
 ## Commands
 
