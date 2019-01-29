@@ -30,7 +30,7 @@ For example:
 >
 > This is a B-Tier battle which should be fought in the **Ultra League**.
 >
-> _React with 🔍 to receive a search string for your team._
+> _React with_ 🔍 _to receive a search string for your team._
 
 To help balance the match-ups, Pokémon are split into tiers based on their maximum CP:
 
