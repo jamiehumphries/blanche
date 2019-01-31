@@ -175,8 +175,9 @@ function usageReport () {
 
 function reportFromStatsMap (title, statsMap) {
   const orderedGuilds = Object.keys(statsMap).sort((k1, k2) => statsMap[k2] - statsMap[k1])
+  const total = Object.values(statsMap).reduce((sum, val) => sum + val, 0)
   const lines = orderedGuilds.map(guild => `**${guild}:** ${statsMap[guild]}`).join('\n')
-  return `**${title.toUpperCase()}**\n\n${lines}`
+  return `**${title.toUpperCase()} (${total})**\n\n${lines || 'None'}`
 }
 
 function trackBattle (guild) {
