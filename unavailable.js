@@ -11,22 +11,13 @@ module.exports = new Set([
   368, // Gorebyss
   385, // Jirachi
   // SINNOH
-  408, // Cranidos
-  409, // Rampardos
-  410, // Shieldon
-  411, // Bastiodon
   412, // Burmy
   413, // Wormadam
   414, // Mothim
-  415, // Combee
-  416, // Vespiquen
   420, // Cherubi
   421, // Cherrim
   422, // Shellos
   423, // Gastrodon
-  424, // Ambipom
-  431, // Glameow
-  432, // Purugly
   438, // Bonsly
   439, // Mime Jr.
   440, // Happiny
@@ -36,15 +27,10 @@ module.exports = new Set([
   449, // Hippopotas
   450, // Hippowdon
   462, // Magnezone
-  463, // Lickilicky
-  465, // Tangrowth
-  469, // Yanmega
   470, // Leafeon
   471, // Glaceon
   473, // Mamoswine
-  475, // Gallade
   476, // Probopass
-  478, // Froslass
   479, // Rotom
   480, // Uxie
   481, // Mesprit
