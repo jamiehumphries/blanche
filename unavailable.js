@@ -18,7 +18,6 @@ module.exports = new Set([
   421, // Cherrim
   422, // Shellos
   423, // Gastrodon
-  438, // Bonsly
   439, // Mime Jr.
   440, // Happiny
   443, // Gible
