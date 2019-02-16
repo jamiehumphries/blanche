@@ -27,7 +27,6 @@ module.exports = new Set([
   462, // Magnezone
   470, // Leafeon
   471, // Glaceon
-  473, // Mamoswine
   476, // Probopass
   479, // Rotom
   480, // Uxie
