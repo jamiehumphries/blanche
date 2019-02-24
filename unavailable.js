@@ -6,9 +6,6 @@ module.exports = new Set([
   // HOENN
   292, // Shedinja
   352, // Kecleon
-  366, // Clamperl
-  367, // Huntail
-  368, // Gorebyss
   385, // Jirachi
   // SINNOH
   412, // Burmy
