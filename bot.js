@@ -43,7 +43,7 @@ function getGrade (cp) {
 }
 
 Object.keys(cpList).forEach(pkm => {
-  const id = getId(pkm)
+  const id = pokemon.getId(pkm)
   if (!unavailable.has(id)) {
     const cp = cpList[pkm]
     const grade = getGrade(cp)
@@ -128,7 +128,7 @@ function chooseGrade (message) {
 }
 
 function format (team) {
-  return team.map(id => `◓ ${pad(id)} ${getName(id)}`).join('\n')
+  return team.map(id => `◓ ${pad(id)} ${pokemon.getName(id)}`).join('\n')
 }
 
 function pad (n) {
@@ -137,28 +137,6 @@ function pad (n) {
     s = '0' + s
   }
   return s
-}
-
-function getId (name) {
-  switch (name) {
-    case 'Meltan':
-      return 808
-    case 'Melmetal':
-      return 809
-    default:
-      return pokemon.getId(name)
-  }
-}
-
-function getName (id) {
-  switch (id) {
-    case 808:
-      return 'Meltan'
-    case 809:
-      return 'Melmetal'
-    default:
-      return pokemon.getName(id)
-  }
 }
 
 function guildReport () {
