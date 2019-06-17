@@ -4,7 +4,6 @@ module.exports = new Set([
   // HOENN
   292, // Shedinja
   352, // Kecleon
-  385, // Jirachi
   // SINNOH
   439, // Mime Jr.
   479, // Rotom
