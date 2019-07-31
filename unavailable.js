@@ -1,4 +1,5 @@
-module.exports = new Set([
+/** @type {Set<number>} */
+const unavailable = new Set([
   // KANTO
   132, // Ditto
   // HOENN
@@ -14,3 +15,5 @@ module.exports = new Set([
   492, // Shaymin
   493 // Arceus
 ])
+
+module.exports = unavailable

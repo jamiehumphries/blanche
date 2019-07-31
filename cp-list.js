@@ -1,6 +1,7 @@
 // Source: Pokemon GO CP Dex
 // https://docs.google.com/spreadsheets/d/1l8fa_BAkpzm1ZTOwvV3vjgaMlAGOKO0AkRwJP-u18n4/edit#gid=1791446813
-module.exports = Object.freeze({
+/** @type {Object.<string, number>} */
+const cpList = Object.freeze({
   // KANTO
   'Bulbasaur': 1115,
   'Ivysaur': 1699,
@@ -502,3 +503,5 @@ module.exports = Object.freeze({
   'Meltan': 1068,
   'Melmetal': 3599
 })
+
+module.exports = cpList

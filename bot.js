@@ -1,3 +1,12 @@
+/** @typedef {import('discord.js').Message} Message */
+/** @typedef {('S'|'A'|'B'|'C'|'D'|'E'|'F')} Grade */
+/**
+ * @typedef {Object} Tier
+ * @property {('a'|'an')} article
+ * @property {('Great'|'Ultra'|'Master')} league
+ * @property {number[]} pokemon
+ */
+
 const _ = require('lodash')
 const Discord = require('discord.js')
 const pokemon = require('pokemon')
@@ -9,6 +18,7 @@ const unavailable = require('./unavailable')
 
 const SEARCH_EMOJI = '🔍'
 
+/** @type {Object.<string, Tier>} */
 const tiers = {
   S: { article: 'an', league: 'Master', pokemon: [] },
   A: { article: 'an', league: 'Master', pokemon: [] },
@@ -19,8 +29,13 @@ const tiers = {
   F: { article: 'an', league: 'Great', pokemon: [] }
 }
 
+/** @type {Object.<string, Grade[]>} */
 const leagueTiers = _.groupBy(Object.keys(tiers), t => tiers[t].league.toLowerCase())
 
+/**
+ * @param {number} cp
+ * @returns {Grade}
+ */
 function getGrade (cp) {
   if (cp > 3000) {
     return 'S'
@@ -92,6 +107,10 @@ client.on('messageReactionAdd', (messageReaction, user) => {
   }
 })
 
+/**
+ * @param {Message} message
+ * @returns {boolean}
+ */
 function shouldListen (message) {
   const isProduction = this.process.env.ENV === 'production'
   const isTestGuild = message.guild && (message.guild.id === this.process.env.TEST_GUILD)
@@ -99,10 +118,18 @@ function shouldListen (message) {
   return (isProduction && !isTestGuild) || (!isProduction && (isTestGuild || isOwnerDM))
 }
 
+/**
+ * @param {Message} message
+ * @returns {boolean}
+ */
 function isDM (message) {
   return message.channel.type === 'dm'
 }
 
+/**
+ * @param {Message} message
+ * @returns {Grade}
+ */
 function chooseGrade (message) {
   const tierMatch = message.content.match(/\b([SABCDEF])[- ]Tier\b/i)
   if (tierMatch) {
@@ -119,10 +146,18 @@ function chooseGrade (message) {
   return getGrade(_.sample(Object.values(cpList)))
 }
 
+/**
+ * @param {number[]} team
+ * @returns {string}
+ */
 function format (team) {
   return team.map(id => `◓ ${pad(id)} ${pokemon.getName(id)}`).join('\n')
 }
 
+/**
+ * @param {(number|string)} n
+ * @returns {string}
+ */
 function pad (n) {
   let s = n.toString()
   while (s.length < 3) {
