@@ -174,4 +174,4 @@ function track (guild, statsMap) {
   statsMap[name]++
 }
 
-client.login(process.env.TOKEN)
+module.exports = client
