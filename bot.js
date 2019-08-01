@@ -1,4 +1,3 @@
-/** @typedef {import('discord.js').Message} Message */
 /** @typedef {('S'|'A'|'B'|'C'|'D'|'E'|'F')} Grade */
 /**
  * @typedef {Object} Tier
@@ -108,7 +107,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 })
 
 /**
- * @param {Message} message
+ * @param {Discord.Message} message
  * @returns {boolean}
  */
 function shouldListen (message) {
@@ -119,7 +118,7 @@ function shouldListen (message) {
 }
 
 /**
- * @param {Message} message
+ * @param {Discord.Message} message
  * @returns {boolean}
  */
 function isDM (message) {
@@ -127,7 +126,7 @@ function isDM (message) {
 }
 
 /**
- * @param {Message} message
+ * @param {Discord.Message} message
  * @returns {Grade}
  */
 function chooseGrade (message) {
