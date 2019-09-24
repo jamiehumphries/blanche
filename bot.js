@@ -53,10 +53,8 @@ function getGrade (cp) {
   }
 }
 
-Object.keys(cpList).forEach(pkm => {
-  const id = pokemon.getId(pkm)
-  if (!unavailable.has(id)) {
-    const cp = cpList[pkm]
+Object.entries(cpList).forEach(([id, cp]) => {
+  if (!unavailable.has(parseInt(id))) {
     const grade = getGrade(cp)
     tiers[grade].pokemon.push(id)
   }
