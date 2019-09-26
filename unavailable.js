@@ -9,7 +9,6 @@ const unavailable = new Set([
   292, // Shedinja
   352, // Kecleon
   // SINNOH
-  439, // Mime Jr.
   479, // Rotom
   486, // Regigigas
   489, // Phione
