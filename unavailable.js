@@ -13,7 +13,6 @@ const unavailable = new Set([
   486, // Regigigas
   489, // Phione
   490, // Manaphy
-  491, // Darkrai
   492, // Shaymin
   493, // Arceus
   // UNOVA
@@ -56,8 +55,6 @@ const unavailable = new Set([
   559, // Scraggy
   560, // Scrafty
   561, // Sigilyph
-  562, // Yamask
-  563, // Cofagrigus
   564, // Tirtouga
   565, // Carracosta
   566, // Archen
