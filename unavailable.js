@@ -10,7 +10,6 @@ const unavailable = new Set([
   352, // Kecleon
   // SINNOH
   479, // Rotom
-  486, // Regigigas
   489, // Phione
   490, // Manaphy
   492, // Shaymin
@@ -112,7 +111,6 @@ const unavailable = new Set([
   630, // Mandibuzz
   636, // Larvesta
   637, // Volcarona
-  638, // Cobalion
   639, // Terrakion
   640, // Virizion
   641, // Tornadus
