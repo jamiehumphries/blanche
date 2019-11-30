@@ -111,7 +111,6 @@ const unavailable = new Set([
   630, // Mandibuzz
   636, // Larvesta
   637, // Volcarona
-  639, // Terrakion
   640, // Virizion
   641, // Tornadus
   642, // Thundurus
