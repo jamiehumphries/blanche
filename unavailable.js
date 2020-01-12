@@ -18,48 +18,23 @@ const unavailable = new Set([
   494, // Victini
   517, // Munna
   518, // Musharna
-  524, // Roggenrola
-  525, // Boldore
-  526, // Gigalith
   527, // Woobat
   528, // Swoobat
   531, // Audino
-  532, // Timburr
-  533, // Gurdurr
-  534, // Conkeldurr
-  535, // Tympole
-  536, // Palpitoad
-  537, // Seismitoad
-  538, // Throh
-  539, // Sawk
   540, // Sewaddle
   541, // Swadloon
   542, // Leavanny
-  543, // Venipede
-  544, // Whirlipede
-  545, // Scolipede
   546, // Cottonee
   547, // Whimsicott
   548, // Petilil
   549, // Lilligant
-  550, // Basculin
   551, // Sandile
   552, // Krokorok
   553, // Krookodile
   554, // Darumaka
   555, // Darmanitan
-  556, // Maractus
-  557, // Dwebble
-  558, // Crustle
   559, // Scraggy
   560, // Scrafty
-  561, // Sigilyph
-  564, // Tirtouga
-  565, // Carracosta
-  566, // Archen
-  567, // Archeops
-  568, // Trubbish
-  569, // Garbodor
   570, // Zorua
   571, // Zoroark
   572, // Minccino
@@ -78,26 +53,14 @@ const unavailable = new Set([
   585, // Deerling
   586, // Sawsbuck
   587, // Emolga
-  588, // Karrablast
-  589, // Escavalier
   592, // Frillish
   593, // Jellicent
   594, // Alomomola
-  595, // Joltik
-  596, // Galvantula
   602, // Tynamo
   603, // Eelektrik
   604, // Eelektross
   605, // Elgyem
   606, // Beheeyem
-  610, // Axew
-  611, // Fraxure
-  612, // Haxorus
-  613, // Cubchoo
-  614, // Beartic
-  615, // Cryogonal
-  616, // Shelmet
-  617, // Accelgor
   618, // Stunfisk
   619, // Mienfoo
   620, // Mienshao
@@ -111,7 +74,6 @@ const unavailable = new Set([
   630, // Mandibuzz
   636, // Larvesta
   637, // Volcarona
-  640, // Virizion
   641, // Tornadus
   642, // Thundurus
   643, // Reshiram
