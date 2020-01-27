@@ -31,8 +31,6 @@ const unavailable = new Set([
   551, // Sandile
   552, // Krokorok
   553, // Krookodile
-  554, // Darumaka
-  555, // Darmanitan
   559, // Scraggy
   560, // Scrafty
   570, // Zorua
