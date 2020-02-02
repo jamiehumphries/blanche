@@ -18,8 +18,6 @@ const unavailable = new Set([
   494, // Victini
   517, // Munna
   518, // Musharna
-  527, // Woobat
-  528, // Swoobat
   531, // Audino
   540, // Sewaddle
   541, // Swadloon
@@ -31,12 +29,8 @@ const unavailable = new Set([
   551, // Sandile
   552, // Krokorok
   553, // Krookodile
-  559, // Scraggy
-  560, // Scrafty
   570, // Zorua
   571, // Zoroark
-  572, // Minccino
-  573, // Cinccino
   574, // Gothita
   575, // Gothorita
   576, // Gothitelle
