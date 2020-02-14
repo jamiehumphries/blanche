@@ -18,7 +18,6 @@ const unavailable = new Set([
   494, // Victini
   517, // Munna
   518, // Musharna
-  531, // Audino
   540, // Sewaddle
   541, // Swadloon
   542, // Leavanny
@@ -47,7 +46,6 @@ const unavailable = new Set([
   587, // Emolga
   592, // Frillish
   593, // Jellicent
-  594, // Alomomola
   602, // Tynamo
   603, // Eelektrik
   604, // Eelektross
