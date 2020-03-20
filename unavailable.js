@@ -58,8 +58,6 @@ const unavailable = new Set([
   624, // Pawniard
   625, // Bisharp
   626, // Bouffalant
-  627, // Rufflet
-  628, // Braviary
   629, // Vullaby
   630, // Mandibuzz
   636, // Larvesta
@@ -69,8 +67,7 @@ const unavailable = new Set([
   645, // Landorus
   646, // Kyurem
   647, // Keldeo
-  648, // Meloetta
-  649 // Genesect
+  648 // Meloetta
 ])
 
 module.exports = unavailable
