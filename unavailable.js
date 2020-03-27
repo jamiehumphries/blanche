@@ -30,12 +30,6 @@ const unavailable = new Set([
   553, // Krookodile
   570, // Zorua
   571, // Zoroark
-  574, // Gothita
-  575, // Gothorita
-  576, // Gothitelle
-  577, // Solosis
-  578, // Duosion
-  579, // Reuniclus
   580, // Ducklett
   581, // Swanna
   582, // Vanillite
