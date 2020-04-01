@@ -45,7 +45,6 @@ const unavailable = new Set([
   604, // Eelektross
   605, // Elgyem
   606, // Beheeyem
-  618, // Stunfisk
   619, // Mienfoo
   620, // Mienshao
   621, // Druddigon
@@ -58,7 +57,6 @@ const unavailable = new Set([
   637, // Volcarona
   643, // Reshiram
   644, // Zekrom
-  645, // Landorus
   646, // Kyurem
   647, // Keldeo
   648 // Meloetta
