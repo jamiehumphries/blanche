@@ -55,7 +55,6 @@ const unavailable = new Set([
   630, // Mandibuzz
   636, // Larvesta
   637, // Volcarona
-  643, // Reshiram
   644, // Zekrom
   646, // Kyurem
   647, // Keldeo
