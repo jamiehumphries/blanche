@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+
 // https://www.dragonflycave.com/resources/pokemon-list-generator
 // %[number]%, // %[name]%
 
@@ -30,8 +32,6 @@ const unavailable = new Set([
   553, // Krookodile
   570, // Zorua
   571, // Zoroark
-  580, // Ducklett
-  581, // Swanna
   582, // Vanillite
   583, // Vanillish
   584, // Vanilluxe
@@ -55,10 +55,8 @@ const unavailable = new Set([
   630, // Mandibuzz
   636, // Larvesta
   637, // Volcarona
-  644, // Zekrom
-  646, // Kyurem
   647, // Keldeo
-  648 // Meloetta
+  648, // Meloetta
 ])
 
 module.exports = unavailable
