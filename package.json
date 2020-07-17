@@ -6,7 +6,7 @@
   "author": "JTAtomico",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "pokemon": "^2.0.0"
   },
   "devDependencies": {
