@@ -17,16 +17,8 @@ const unavailable = new Set([
   492, // Shaymin
   493, // Arceus
   // UNOVA
-  494, // Victini
   517, // Munna
   518, // Musharna
-  540, // Sewaddle
-  541, // Swadloon
-  542, // Leavanny
-  546, // Cottonee
-  547, // Whimsicott
-  548, // Petilil
-  549, // Lilligant
   551, // Sandile
   552, // Krokorok
   553, // Krookodile
@@ -37,20 +29,16 @@ const unavailable = new Set([
   584, // Vanilluxe
   585, // Deerling
   586, // Sawsbuck
-  587, // Emolga
   592, // Frillish
   593, // Jellicent
   602, // Tynamo
   603, // Eelektrik
   604, // Eelektross
-  605, // Elgyem
-  606, // Beheeyem
   619, // Mienfoo
   620, // Mienshao
   621, // Druddigon
   624, // Pawniard
   625, // Bisharp
-  626, // Bouffalant
   629, // Vullaby
   630, // Mandibuzz
   636, // Larvesta
