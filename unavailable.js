@@ -11,7 +11,6 @@ const unavailable = new Set([
   292, // Shedinja
   352, // Kecleon
   // SINNOH
-  479, // Rotom
   489, // Phione
   490, // Manaphy
   492, // Shaymin
@@ -27,8 +26,6 @@ const unavailable = new Set([
   582, // Vanillite
   583, // Vanillish
   584, // Vanilluxe
-  585, // Deerling
-  586, // Sawsbuck
   592, // Frillish
   593, // Jellicent
   602, // Tynamo
