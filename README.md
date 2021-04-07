@@ -48,7 +48,8 @@ The idea behind Blanche is to give trainers a reason to use a wider variety of t
 
 ## Installation
 
-To install Blanche on a Discord server that you administer, follow this link: [Install Blanche](https://discordapp.com/oauth2/authorize?client_id=532196601075335168&scope=bot&permissions=2112)
+~To install Blanche on a Discord server that you administer, follow this link: [Install Blanche](https://discordapp.com/oauth2/authorize?client_id=532196601075335168&scope=bot&permissions=2112)~
+This bot has been removed from Discord.
 
 Blanche only requires the _Send Messages_ and _Add Reactions_ permissions.
 
