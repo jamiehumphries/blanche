@@ -1,5 +1,7 @@
 # Blanche
 
+**⚠ This project is no longer maintained and the bot has been removed from Discord.**
+
 ## Overview
 
 Blanche is a Discord bot that you can add to your server to give random line-ups for Trainer Battles in Pokémon GO.
